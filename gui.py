@@ -126,12 +126,13 @@ class WordDefDialogue(QDialog):
         gr = QGroupBox()
         gr.setTitle('')
         gr.setLayout(gl)
+        row = 0
 
         # Looping through data structure
         for word_el in self.word_data:
-            row = 0
 
             if word_dictionary != word_el.word_dictionary:
+                row = 0
                 gl = QGridLayout()
                 gr = QGroupBox()
                 gr.setTitle(word_el.word_dictionary)
